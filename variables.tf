@@ -1,14 +1,14 @@
-variable "region" {
- default = "us-west-1"
- description = "AWS Region"
+variable "aws_region" {
+  description = "The AWS region to create things in."
+  default     = "us-east-1"
 }
- 
-variable "ami" {
- default = "ami-00831fc7c1e3ddc60"
- description = "Amazon Machine Image ID for Ubuntu Server 20.04"
+
+variable "key_name" {
+  description = " SSH keys to connect to ec2 instance"
+  default     =  "terraform-ec2"
 }
- 
-variable "type" {
- default = "t2.micro"
- description = "Size of VM"
+
+variable "instance_type" {
+  description = "instance type for ec2"
+  default     =  "t2.micro"
 }
